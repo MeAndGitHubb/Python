@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_move_extend,access_stock_move_extend,model_stock_move_extend,base.group_user,1,1,1,1
+access_stock_move_extend_1,access_stock_move_extend_1,model_stock_move_extend_1,base.group_user,1,1,1,1
+access_stock_picking_extend,access_stock_picking_extend,model_stock_picking_extend,base.group_user,1,1,1,1
+

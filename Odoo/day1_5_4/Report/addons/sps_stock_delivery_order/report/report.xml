@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <report
+            id="report_stock_delivery"
+            string="In phiếu xuất pdf"
+            model="stock.picking"
+            report_type="qweb-pdf"
+            name="sps_stock_delivery_order.report_stock_delivery"
+            file="sps_stock_delivery_order.report_stock_delivery"
+    />
+</odoo>

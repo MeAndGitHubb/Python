@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <report
+        id ="sps_stock_internal_transfer.report_form_cards"
+        string = "In Phiếu Điều Chuyển (PDF)"
+        model="stock.picking"
+        report_type="qweb-pdf"
+        name="sps_stock_internal_transfer.report_stock_internal"
+        file="sps_stock_internal_transfer.report_stock_internal"
+        menu ="True"
+    />
+</odoo>

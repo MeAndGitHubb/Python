@@ -1,0 +1,45 @@
+struct Graph
+{
+int n; 
+int**G;
+};
+bool testGraph (int a, int* v, Graph Gr)
+{
+for (int i = 1; i <= Gr.n; i++)
+{
+if(v[i]== a)
+return false;
+}
+return true;
+}
+int topNear (int a, Graph Gr, int* v)
+{
+int min - 0, d - 1000; 
+for (int i = 1; i <= Gr.n; i++)
+{
+bool k = testGraph (i, V, Gr); 
+if ((Gr.G[a][i] > 0) && (k = true))
+{
+if (Gr.G[a] [i] <d)
+{
+min=i; 
+d = Gr.G[a] [i];
+}
+}
+}
+return min;
+}
+void Findway (int x, Graph Gr, int v)
+{
+int e = x; 
+v[1] = x;
+for (int i = 2; i <= Gr.n; i++)
+{
+int next = topNeare, Gr, v);
+v[i] = next;
+e = next;
+}
+v (Gr.n+1) = x;
+}
+
+

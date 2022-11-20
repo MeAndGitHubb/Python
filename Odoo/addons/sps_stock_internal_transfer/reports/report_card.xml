@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="report_stock_internal">
+<!--        <t t-call="web.external_layout">-->
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+<!--                    <link rel="stylesheet" type="text/css"-->
+<!--                          href="http://115.75.142.7:8069/sps_stock_internal_transfer/static/src/css/style.css"/>-->
+                    <style>
+                        table , td, th {
+                        border: 1px solid #595959;
+                        border-collapse: collapse;
+                        text-align: center
+                        }
+                        td, th {
+                        padding: 3px;
+                        width: 30px;
+                        height: 25px;
+                        }
+                        th {
+                        background: #f0e6cc;
+                        }
+                        .even {
+                        background: #fbf8f0;
+                        }
+                        .odd {
+                        background: #fefcf9;
+                        }
+                    </style>
+                    <div style="inline-block;height:100px;">
+                        <div style="float: left;width: 65%;">
+                        <img style="width: 150px;height:100px;" t-att-src="image_data_uri(o.company_id.logo)"/>
+                        </div>
+                        <div style="float: left;width: 35%;">
+                            <p>
+                        Mẫu số : 02-VT
+                        <br/>
+                        (Ban hành theo Thông tư số 133/2016/TT-BTC
+                        <br/>
+                             ngày: 26/08/2016 của Bộ Tài Chánh)
+                        <br/>
+
+                            </p>
+                            <p style="padding-left:25%;">
+                                Nợ :…………..<br/>
+                                Có :…………..
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <h1 style="text-align: center">PHIẾU ĐIỀU CHUYỂN KHO</h1>
+
+                    <div style="text-align: center; margin-bottom:5px;">
+                        Ngày
+                        <t t-esc="o.scheduled_date.day"/>
+                        Tháng
+                        <t t-esc="o.scheduled_date.month"/>
+                        Năm
+                        <t t-esc="o.scheduled_date.year"/>
+                        <br/>
+                        Số:
+                        <t t-esc="o.name"/>
+                        <br/>
+                    </div>
+                    <div style="inline-block;">
+                        <div style="float: left;width: 50%;margin-bottom:10px;">
+                           <b>Danh bạ:</b>
+                            <t t-esc="o.partner_id.name"/>
+                            <br/>
+                            <b>Xuất tại kho (ngăn lô):</b>
+                            <t t-esc="o.location_id.location_id.name"/>
+                            /
+                            <t t-esc="o.location_id.name"/>
+                            <br/>
+                            <b>Nhập tại kho (ngăn lô):</b>
+                            <t t-esc="o.location_id.location_id.name"/>
+                            /
+                            <t t-esc="o.location_dest_id.name"/>
+                            <br/>
+                        </div>
+
+                        <div style="float: left;width: 50%;padding-bottom:20px,padding-top:10px;">
+                            <b>Lý do điều chuyển:</b>
+                            <t t-esc="o.operation_type.name"/>
+                            <br/>
+                            <b>Người vận chuyển:</b>
+                            <t t-esc="o.ten_nguoi_vc"/>
+                            <br/>
+                            <b>Lệnh xuất kho số:</b>
+                            <t t-esc="o.lenhxuatkho"/>
+                            <br/>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12">
+                        <table style="width:100%">
+                            <thead>
+                                <tr>
+                                    <td rowspan="2"><b>STT</b></td>
+                                    <td rowspan="2"><b>Tên, nhãn hiệu, quy cách, phẩm chất vật tư (sản phẩm, hàng hóa)</b></td>
+                                    <td rowspan="2"><b>Số Lô/sê ri</b></td>
+                                    <td rowspan="2"><b>ĐVT</b></td>
+                                    <td colspan="4"><b>Số lượng</b></td>
+
+                                </tr>
+                                <tr>
+                                    <td><b>Yêu cầu</b></td>
+                                    <td><b>Thực xuất</b></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="i" t-value="1"/>
+                                <t t-set="total_thuc_xuat" t-value="0"/>
+                                <t t-foreach="o.move_line_ids_without_package" t-as="move_line">
+
+                                    <tr>
+                                        <td>
+                                            <span t-esc="i"/>
+                                        </td>
+                                        <t t-set="i" t-value="i+1"/>
+                                        <td>
+                                            <span t-field="move_line.product_id.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="move_line.lot_id.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="move_line.product_uom_id"/>
+                                        </td>
+                                        <td>
+                                            <span></span>
+                                        </td>
+                                        <td>
+                                            <span t-field="move_line.qty_done"/>
+                                        </td>
+                                        <t t-set="total_thuc_xuat" t-value="total_thuc_xuat + move_line.qty_done"/>
+                                    </tr>
+                                </t>
+                                <tr>
+                                    <td colspan="5">
+                                        <b>Tổng cộng</b>
+                                    </td>
+                                    <td>
+                                        <span t-esc="total_thuc_xuat"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <br/>
+                    </div>
+
+                    <div style="width:100%">
+                        <b>Tổng số tiền (viết bằng chữ)</b>…………………………………………………………………………………………….<br/>
+                        <b>Số chứng từ gốc kèm theo:</b>
+                        <t t-esc="o.origin"/><br/>
+                        <b>Ghi chú:</b>
+                        <t t-esc="o.note"/>
+                    </div>
+
+                    <div style="text-align: right">
+                        <p>Ngày
+                            <t t-esc="o.scheduled_date.day"/>
+                            Tháng
+                            <t t-esc="o.scheduled_date.month"/>
+                            Năm
+                            <t t-esc="o.scheduled_date.year"/>
+                        </p>
+                    </div>
+
+                    <div>
+                        <div style="text-align: center;float: left;width: 25%">
+                            <p style="margin-bottom: 0;"><b>Người lập phiếu</b></p>
+                            <p>(Ký, họ tên)</p>
+                        </div>
+                        <div style="text-align: center;float: left;width: 25%">
+                            <p style="margin-bottom: 0;"><b>Người nhận</b></p>
+                            <p>(Ký, họ tên)</p>
+                        </div>
+                        <div style="text-align: center;float: left;width: 25%">
+                            <p style="margin-bottom: 0;"><b>Thủ kho</b></p>
+                            <p>(Ký, họ tên)</p>
+                        </div>
+                        <div style="text-align: center;float: left;width: 25%">
+                            <p style="margin-bottom: 0;"><b>Kế toán trưởng</b></p>
+                            <p>(Ký, họ tên)</p>
+                        </div>
+                    </div>
+
+
+                </t>
+            </t>
+<!--        </t>-->
+    </template>
+
+</odoo>

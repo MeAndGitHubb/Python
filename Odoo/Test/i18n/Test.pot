@@ -1,0 +1,97 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* Test
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220405\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-06 02:58+0000\n"
+"PO-Revision-Date: 2022-04-06 02:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_move_extend__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_move_extend__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_move_extend__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_move__extend_id
+msgid "Extend"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_move_extend__group
+msgid "Group"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_move_extend__id
+msgid "ID"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_move_extend____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_move_extend__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_move_extend__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: Test
+#: model:ir.model,name:Test.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_move__new_field
+#: model:ir.model.fields,field_description:Test.field_stock_move_extend__name
+msgid "Test field"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_move_extend__info
+msgid "Thongtin"
+msgstr ""
+
+#. module: Test
+#: model:ir.model,name:Test.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_picking__standard_id
+msgid "field_test"
+msgstr ""
+
+#. module: Test
+#: model:ir.model,name:Test.model_stock_move_extend
+msgid "stock.move.extend"
+msgstr ""
+
+#. module: Test
+#: model:ir.model.fields,field_description:Test.field_stock_picking__test
+msgid "test"
+msgstr ""

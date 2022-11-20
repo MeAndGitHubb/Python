@@ -1,0 +1,153 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* om_hospital
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220221\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-24 08:35+0000\n"
+"PO-Revision-Date: 2022-02-24 08:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_hospital_patient__age
+msgid "Age"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_hospital_patient__create_uid
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move_extend__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_hospital_patient__create_date
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move_extend__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_hospital_patient__note
+msgid "Description"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_hospital_patient__display_name
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move_extend__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move__extend_id
+msgid "Extend"
+msgstr "Mở rộng"
+
+#. module: om_hospital
+#: model:ir.model.fields.selection,name:om_hospital.selection__hospital_patient__gender__female
+msgid "Female"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_hospital_patient__gender
+msgid "Gender"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model,name:om_hospital.model_hospital_patient
+msgid "Hospital Patient"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_hospital_patient__id
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move_extend__id
+msgid "ID"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_hospital_patient____last_update
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move_extend____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_hospital_patient__write_uid
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move_extend__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_hospital_patient__write_date
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move_extend__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields.selection,name:om_hospital.selection__hospital_patient__gender__male
+msgid "Male"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_hospital_patient__name
+msgid "Name"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move_extend__group
+msgid "Nhóm"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields.selection,name:om_hospital.selection__hospital_patient__gender__other
+msgid "Other"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model,name:om_hospital.model_stock_move
+msgid "Stock Move"
+msgstr "Hoạt động kho"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move_extend__name
+msgid "Test field"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move__new_field
+msgid "Test_field"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_stock_move_extend__info
+msgid "Thông tin nhập"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model,name:om_hospital.model_stock_picking
+msgid "Transfer"
+msgstr "Điều chuyển"
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_stock_picking__standard_id
+msgid "field_test"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_stock_picking__standard_medicine
+msgid "medicine_test"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model,name:om_hospital.model_stock_move_extend
+msgid "stock.move.extend"
+msgstr ""
+
+#. module: om_hospital
+#: model:ir.model.fields,field_description:om_hospital.field_stock_picking__standard_store
+msgid "store_test"
+msgstr ""

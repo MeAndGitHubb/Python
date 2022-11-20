@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="report_pdf">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <table class="table table-sm">
+                            <tbody>
+                                <!--                                <thead style="display: table-row-group">-->
+                                <!--                                    <tr>-->
+                                <!--                                        <t t-esc="o.name"/>-->
+                                <!--                                         <t t-esc="o.picking_type_id"/>-->
+                                <!--                                        <t t-esc="o.scheduled_id"/>-->
+                                <!--                                        <t t-esc="o.origin"/>-->
+                                <!--                                        <t t-esc="o.productLot"/>-->
+                                <!--                                        <t t-esc="o.caSX"/>-->
+                                <!--                                        <t t-esc="o.standard_id"/>-->
+                                <!--                                    </tr>-->
+                                <!--                                    <tr>-->
+                                <!--                                         <t t-esc="o.picking_type_id"/>-->
+
+                                <!--                                    </tr>-->
+                                <!--                                </thead>-->
+                                <thead style="display: table-row-group">
+                                    <tr>
+                                        <th class="text-center" style="width: 20%" scope="col" t-esc="o.product_id"></th>
+                                        <th class="text-center" style="width: 20%" scope="col">First Hash</th>
+                                        <th class="text-center" style="width: 20%" scope="col">First Entry</th>
+                                        <th class="text-center" style="width: 20%" scope="col">Last Hash</th>
+                                        <th class="text-center" style="width: 20%" scope="col">Last Entry</th>
+                                    </tr>
+                                </thead>
+
+                            </tbody>
+                        </table>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

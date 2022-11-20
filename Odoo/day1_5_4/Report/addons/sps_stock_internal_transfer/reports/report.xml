@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <report
+        id ="report_form_cards"
+        string = "Phiếu điều chuyển (PDF)"
+        model="stock.picking"
+        report_type="qweb-pdf"
+        name="sps_stock_internal_transfer.report_stock_internal"
+        file="sps_stock_internal_transfer.report_stock_internal"/>
+
+<!--    <report-->
+<!--        id ="report_form_card"-->
+<!--        string = "Phiếu điều chuyển (Excel)"-->
+<!--        model="stock.picking"-->
+<!--        report_type="xlsx"-->
+<!--        name="SPS_stock_internal.report_stock_internal"-->
+<!--        file="SPS_stock_internal.report_stock_internal"/>-->
+</odoo>

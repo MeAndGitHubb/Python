@@ -1,0 +1,20 @@
+<odoo>
+    <data noupdate="0">
+        <record id="product_product_template_only_form_view" model="ir.ui.view">
+            <field name="name">product_product_template_only_form_view</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//field[@name='responsible_id']" position="after">
+                         <field name="luongsudungtoithieu"></field>
+                         <field name="luongtoncanhbao"></field>
+                         <field name="luongtondu"></field>
+                 </xpath>
+                 <xpath expr="//field[@name='barcode']" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                 </xpath>
+             </field>
+        </record>
+    </data>
+</odoo>
+

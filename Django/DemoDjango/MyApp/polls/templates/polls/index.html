@@ -1,0 +1,15 @@
+{%extends 'polls/base.html'%}
+
+{%block content%}
+    <h1>Templates</h1>
+    <p> Tao ten la <b>{{name}}</b></p>
+
+<h2>Tai san cua toi bao gom:</h2>
+<ul>
+    {% for item in taisan %}
+        {%if item != 'Laptop' %}
+            <li> {{item}} </li>
+        {%endif%}
+    {%endfor%}
+</ul>
+{%endblock%}

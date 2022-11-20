@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Add you code here -->
+        <!-- model.name inherit form view -->
+        <record id="stock_view_picking_form" model="ir.ui.view">
+            <field name="name">stock_view_picking_form</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <!-- Add your xpath here -->
+                <xpath expr="//field[@name='origin']" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </xpath>
+                <xpath expr="//field[@name='location_dest_id']" position="after">
+                    <field name="lenhxuatkho" attrs="{'invisible':[['picking_type_code','not in','internal']]}"/>
+                </xpath>
+                <xpath expr="//field[@name='origin']" position="after">
+                    <field name="operation_type"/>
+                </xpath>
+                <xpath expr="//field[@name='origin']" position="after">
+                    <field name="ten_nguoi_vc" attrs="{'invisible':[['picking_type_code','not in','internal']]}"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="stock_move_view" model="ir.ui.view">
+            <field name="name">stock.move.view.form</field>
+            <field name="model">stock.move.extend</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="text"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+<!--        <record id="stock_move_line_tree_view_inherit" model="ir.ui.view">-->
+<!--         <field name="name">stock.move.line.tree.inherit</field>-->
+<!--         <field name="model">stock.move.line</field>-->
+<!--         <field name="inherit_id" ref="stock.view_stock_move_line_detailed_operation_tree"/>-->
+<!--         <field name="arch" type="xml">-->
+<!--          <xpath expr="//field[@name='lot_id']" position="after">-->
+<!--             <field name="product_group"-->
+<!--              attrs="{'column_invisible':[['parent.picking_type_code','=','incoming']]}"/>-->
+<!--          </xpath>-->
+<!--         </field>-->
+<!--      </record>-->
+
+        <record id="stock_move_tree_view" model="ir.ui.view">
+            <field name="name">stock.move.tree.view</field>
+            <field name="model">stock.move.extend</field>
+            <field name="arch" type="xml">
+                <tree string="Product" default_order="create_date desc">
+                    <field name="name"/>
+                    <field name="text"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="warehouse_action" model="ir.actions.act_window">
+            <field name="name">Kiểu hoạt động</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.move.extend</field>
+        </record>
+
+        <menuitem id="Warehouse_menu"
+                  name="Kiểu hoạt động"
+                  action="warehouse_action"
+                  parent="stock.menu_warehouse_config"
+                  sequence="10"
+                  groups="base.group_user"/>
+    </data>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <report
+            id="report_patient_car"
+            string="In File PDF"
+            model="stock.picking"
+            report_type="qweb-pdf"
+            name="Test.report_pdf"
+            file="Test.report_pdf"
+        />
+</odoo>
